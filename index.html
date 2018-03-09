@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <title>POKEMON</title>
+</head>
+<body onload="contador();">
+    
+    <audio id="inicio" src="./audio/song.mp3"></audio>
+        <div class="contador fila">
+            <div class="clock fila">
+                <p id="reloj"></p>
+            </div>
+            <br>
+            <div class="btn fila">
+                <button id="boton" onclick="reloj(); this.disabled=true;" >Comienza el juego</button>
+            </div>
+            <br>
+                <p id="game-over"></p>
+        </div>
+        <div id="game">
+            <img src="./Img/logo.png" class="logo" id="ganador" >
+        </div>
+        <div class="fila" id="img">
+            <img src="./Img/logo.png">
+        </div>
+
+        <audio  id="inicio" src="./audio/song.mp3"></audio>
+        <audio id="clic" src="./audio/clic.mp3"></audio>
+        <audio id="acierto" src="./audio/bounce.mp3"></audio>
+        <audio id="fail" src="./audio/fail.mp3"></audio>
+        <audio id="win" src="./audio/winner.mp3"></audio>
+        
+
+    
+      
+
+
+    <script src="./Js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #6589f9;
+}
+
+.rejilla{
+    margin: 40px auto;
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tarjeta{
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    transform-style: preserve-3d;
+    transition: all 400ms linear;
+    position: relative;
+}
+
+.anverso{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-image: url("../Img/pokeball.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;        /*Para que si tiene transparencia no se vea la otra cara*/
+}
+
+.reverso{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    backface-visibility: hidden; 
+    transform: rotateY(180deg);
+}
+
+.seleccionado{
+    transform: rotateY(180deg);
+}
+
+.rejilla.seleccionado{
+    transform: rotateY(0deg);
+}
+
+.eliminado .anverso {
+    background-image: none !important;
+}
+
+.logo{
+    position: fixed;
+    top:-100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 80%;
+    z-index: 10;
+    transition: all 50ms ease-in-out;
+}
+
+.logo.open{
+    top: 50%;
+}
+
+#game {
+    display: none;
+}
+
+
+/*Reloj cuenta atrás*/
+
+.fila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contador{
+    width: 100%;
+    height: 100%;
+    
+}
+
+#boton{
+    background-color: yellow;
+    font-size: 30px;
+
+}
+
+#game-over{
+    font-size: 100px;
+    color: yellow;
+}
+
+#reloj{
+    font-size: 30px;
+    color: yellow;
+}
+
+#over{
+    display: none;
+}
